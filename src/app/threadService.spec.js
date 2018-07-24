@@ -1,6 +1,6 @@
 import app from './app.module';
 
-describe('Thread Service test', ()=>{
+describe('Thread Service testyy', ()=>{
     let httpBackend,
         threadService,
         response;
