@@ -1,1 +1,1 @@
-# AngularJS-ES6-Spotify
+# AngularJS-ES6 Unit tests
