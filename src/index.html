@@ -1,0 +1,21 @@
+<!-- VERSION <%= htmlWebpackPlugin.options.version %> -->
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="<%= htmlWebpackPlugin.options.name %>" version="<%= htmlWebpackPlugin.options.version %>">
+  </head>
+  <body>
+    <div ng-controller="homeController as vm">
+      {{vm.test}}
+      <button style="border: 1px solid red;" ng-click="vm.meth()">
+        click user
+      </button>
+      <button style="border: 1px solid red;" ng-click="vm.band()">
+          click band
+      </button>
+    </div>
+  </body>
+</html>
