@@ -15,7 +15,11 @@ class ThreadController {
         if(typeof sentence !== 'string') throw new Error('Please provide string param');
         if(sentence === '') throw new Error('String should have at least one char');
         if(!sentence.includes(' ')) return sentence;
-        const sentenceArray = sentence.replace(/\s+/g, ' ').trim().split(' ');
+        const sentenceArray = sentence.split(' ');
+        let destinationArray = sentenceArray.filter((singleWord ) => {
+            return singleWord ;
+        })
+        // const sentenceArray = sentence.replace(/\s+/g, ' ').trim().split(' ');
         // for(let sentence of sentenceArray) {
         //     if(destinationArray.indexOf(sentence) === -1){
         //         destinationArray.push(sentence);
@@ -31,7 +35,7 @@ class ThreadController {
         // return destinationArray.join(' ');
 
         // return Array.from(new Set(sentenceArray)).join(' ');
-        return [...new Set(sentenceArray)].join(' ');
+        return [...new Set(destinationArray)].join(' ');
         
     }
 }
